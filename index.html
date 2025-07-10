@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <main>
     <div class="dashboard-window">
         <div class="sidebar-left">
             <div class="content-container">
@@ -16,15 +17,16 @@
                     <form class="search-bar">
                         <!-- Unicode for mac cmd -->
                         <input type="text" placeholder="Search (&#8984;K)" />
+                        <button type="submit" hidden></button>
                     </form>
                     <button class="add-task-button">+</button>
                 </div>
-                <button class="sidebar-button">Dashboard</button>
-                <button class="sidebar-button">Today</button>
-                <button class="sidebar-button">Starred</button>
+                <button class="sidebar-button">📝 Dashboard</button>
+                <button class="sidebar-button">📆 Today</button>
+                <button class="sidebar-button">⭐️ Starred</button>
                 <div class="folder">
                     <div class="folder-container">
-                        <div class="folder">Folder A</div>
+                        <div class="folder-label">Folder A</div>
                         <button class="add-project-button">+</button>
                     </div>
                     <button class="project">Pinned Project A</button>
@@ -33,7 +35,7 @@
                 </div>
                 <div class="folder">
                     <div class="folder-container">
-                        <div class="folder">Folder B</div>
+                        <div class="folder-label">Folder B</div>
                         <button class="add-project-button">+</button>
                     </div>
                     <button class="project">Pinned Project A</button>
@@ -49,6 +51,7 @@
         <div class="dashboard-view"></div>
         <div class="sidebar-right"></div>
     </div>
+    </main>
 </body>
 
 </html>
