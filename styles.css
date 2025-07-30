@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
 }
@@ -21,18 +27,19 @@ html, body {
 
 .search-container {
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
-.sidebar-button {
-    margin: 0.5em 0em;
+.sidebar-button:hover,
+.sidebar-button:focus {
+    margin: 0.5rem 0rem;
     text-align: left;
 }
 
 .folder {
     display: flex;
     flex-direction: column;
-    margin: 0.5em 0em;
+    margin: 0.5rem 0rem;
 }
 
 .folder-container {
@@ -41,8 +48,8 @@ html, body {
 }
 
 .project {
-    margin: 0.25em;
-    margin-left: 1.5em;
+    margin: 0.25rem;
+    margin-left: 1.5rem;
 }
 
 .settings-container {
