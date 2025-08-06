@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid blue; /* for debugging */
+    border: 0px solid blue; /* for debugging */
 }
 
 html, body {
@@ -10,17 +10,21 @@ html, body {
 }
 
 main {
-    display: flex; 
+    display: flex;
+    flex-direction: row;
     height: 100%
 }
 
 .sidebar {
-    max-width: 15%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 0;
+    border: 1px solid red;
+}
+
+.dashboard {
+    border: 1px solid green;
 }
 
 .search {
