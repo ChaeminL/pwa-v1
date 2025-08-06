@@ -10,9 +10,9 @@
 
 <body>
     <main>
-        <div class="sidebar">
+        <nav class="sidebar sidebar--left" aria-label="Main Navigation">
             <div class="search">
-                <form class="search__input">
+                <form class="search__form">
                     <label for="search-field"></label>
                     <input type="text" id="search-field" placeholder="Search (&#8984;K)" />
                     <button type="submit" hidden></button>
@@ -27,8 +27,8 @@
                     <div class="folder__name">Folder A</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project--pinned">Pinned Project A</button>
-                <button class="folder__project--pinned">Pinned Project B</button>
+                <button class="folder__project folder__project--pinned">Pinned Project A</button>
+                <button class="folder__project folder__project--pinned">Pinned Project B</button>
                 <button class="folder__project">Project C</button>
             </div>
             <div class="folder">
@@ -36,7 +36,7 @@
                     <div class="folder__name">Folder B</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project--pinned">Pinned Project A</button>
+                <button class="folder__project folder__project--pinned">Pinned Project A</button>
                 <button class="folder__project">Project B</button>
                 <button class="folder__project">Project C</button>
             </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="dashboard"></div>
-        <div class="sidebar"></div>
+        <nav class="sidebar sidebar--right"></div>
     </main>
 </body>
 

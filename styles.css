@@ -2,16 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid blue;
+    border: 1px solid blue; /* for debugging */
 }
 
-/* 
-.dashboard {
+html, body {
     height: 100%;
-} */
+}
 
 main {
     display: flex; 
+    height: 100%
 }
 
 .sidebar {
@@ -20,7 +20,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
+    flex-shrink: 0;
 }
 
 .search {
@@ -60,5 +60,5 @@ main {
 }
 
 .dashboard {
-    flex: 2;
+    flex: 1;
 }
