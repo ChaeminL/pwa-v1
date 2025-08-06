@@ -10,48 +10,43 @@
 
 <body>
     <main>
-    <div class="dashboard-window">
-        <div class="sidebar-left">
-            <div class="content-container">
-                <div class="search-container">
-                    <form class="search-bar">
-                        <!-- Unicode for mac cmd -->
-                         <label for="search-field"></label>
-                        <input type="text" id="search-field" placeholder="Search (&#8984;K)" />
-                        <button type="submit" hidden></button>
-                    </form>
-                    <button class="add-task-button">+</button>
-                </div>
-                <button class="sidebar-button">📝 Dashboard</button>
-                <button class="sidebar-button">📆 Today</button>
-                <button class="sidebar-button">⭐️ Starred</button>
-                <div class="folder">
-                    <div class="folder-container">
-                        <div class="folder-label">Folder A</div>
-                        <button class="add-project-button">+</button>
-                    </div>
-                    <button class="project">Pinned Project A</button>
-                    <button class="project">Pinned Project B</button>
-                    <button class="project">Project C</button>
-                </div>
-                <div class="folder">
-                    <div class="folder-container">
-                        <div class="folder-label">Folder B</div>
-                        <button class="add-project-button">+</button>
-                    </div>
-                    <button class="project">Pinned Project A</button>
-                    <button class="project">Project B</button>
-                    <button class="project">Project C</button>
-                </div>
+        <div class="sidebar">
+            <div class="search">
+                <form class="search__input">
+                    <label for="search-field"></label>
+                    <input type="text" id="search-field" placeholder="Search (&#8984;K)" />
+                    <button type="submit" hidden></button>
+                </form>
+                <button class="search__addTask">+</button>
             </div>
-            <div class="settings-container">
-                <button class="settings">⚙️</button>
-                <button class="collapse">←</button>
+            <button class="sidebar__button">📝 Dashboard</button>
+            <button class="sidebar__button">📆 Today</button>
+            <button class="sidebar__button">⭐️ Starred</button>
+            <div class="folder">
+                <div class="folder__header">
+                    <div class="folder__name">Folder A</div>
+                    <button class="folder__addProject">+</button>
+                </div>
+                <button class="folder__project--pinned">Pinned Project A</button>
+                <button class="folder__project--pinned">Pinned Project B</button>
+                <button class="folder__project">Project C</button>
+            </div>
+            <div class="folder">
+                <div class="folder__header">
+                    <div class="folder__name">Folder B</div>
+                    <button class="folder__addProject">+</button>
+                </div>
+                <button class="folder__project--pinned">Pinned Project A</button>
+                <button class="folder__project">Project B</button>
+                <button class="folder__project">Project C</button>
+            </div>
+            <div class="settings__header">
+                <button class="settings__settings">⚙️</button>
+                <button class="settings__collapse">←</button>
             </div>
         </div>
-        <div class="dashboard-view"></div>
-        <div class="sidebar-right"></div>
-    </div>
+        <div class="dashboard"></div>
+        <div class="sidebar"></div>
     </main>
 </body>
 
