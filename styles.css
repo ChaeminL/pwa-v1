@@ -23,10 +23,6 @@ main {
     border: 1px solid red;
 }
 
-.dashboard {
-    border: 1px solid green;
-}
-
 .search {
     display: flex;
     margin-bottom: 2rem;
@@ -65,4 +61,24 @@ main {
 
 .dashboard {
     flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-areas: "header" "navigation" "main";
+}
+
+/* for debugging */
+.dashboard > * {
+    border: 1px solid green;
+}
+
+.dashboard__header {
+    grid-area: header;
+}
+
+.dashboard__navigation {
+    grid-area: navigation;
+}
+
+.dashboard__content {
+    grid-area: main;
 }
