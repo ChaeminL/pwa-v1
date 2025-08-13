@@ -28,12 +28,6 @@ main {
     margin-bottom: 2rem;
 }
 
-.sidebar__button:hover,
-.sidebar__button:focus {
-    margin: 0.5rem 0rem;
-    text-align: left;
-}
-
 .folder {
     display: flex;
     flex-direction: column;
