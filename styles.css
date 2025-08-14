@@ -5,6 +5,14 @@
     border: 0px solid blue; /* for debugging */
 }
 
+h2 {
+    font-weight: normal;
+}
+
+h1 {
+    line-height: 1;
+}
+
 html, body {
     height: 100%;
 }
@@ -39,12 +47,12 @@ main {
     justify-content: space-between;
 }
 
-.folder__project, .folder__project--pinned {
+.folder__project, .folder__project.-pinned {
     margin: 0.25rem;
     margin-left: 1.5rem;
 }
 
-.folder__project--pinned {
+.folder__project.-pinned {
     color: blue;
 }
 
@@ -56,7 +64,7 @@ main {
 .dashboard {
     flex: 1;
     display: grid;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-rows: 1fr auto 8.5fr;
     grid-template-areas: "header" "navigation" "main";
 }
 
@@ -67,10 +75,36 @@ main {
 
 .dashboard__header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .dashboard__navigation {
     grid-area: navigation;
+    display: flex;
+    gap: 1rem;
+}
+
+.dashboard__navButton {
+    margin: 0.5em;
+    padding: 0.5em 0.75em 0.1em 0.75em;
+    background-color: transparent;
+    text-decoration: underline black;
+}
+
+.dashboard__navButton:hover {
+    text-decoration: underline red;
+}
+
+.dashboard__viewButton {
+    margin: 0.5em;
+    padding: 0.5em 0.75em;
+    border-radius: 2em;
+}
+
+.dashboard__viewButton.-pushLeft {
+    margin-left: auto;
 }
 
 .dashboard__content {

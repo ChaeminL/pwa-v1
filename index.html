@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <nav class="sidebar sidebar--left" aria-label="Main Navigation">
+        <nav class="sidebar -left" aria-label="Main Navigation">
             <div class="search">
                 <form class="search__form">
                     <label for="search-field"></label>
@@ -27,8 +27,8 @@
                     <div class="folder__name">Folder A</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project folder__project--pinned">Pinned Project A</button>
-                <button class="folder__project folder__project--pinned">Pinned Project B</button>
+                <button class="folder__project -pinned">Pinned Project A</button>
+                <button class="folder__project -pinned">Pinned Project B</button>
                 <button class="folder__project">Project C</button>
             </div>
             <div class="folder">
@@ -36,7 +36,7 @@
                     <div class="folder__name">Folder B</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project folder__project--pinned">Pinned Project A</button>
+                <button class="folder__project -pinned">Pinned Project A</button>
                 <button class="folder__project">Project B</button>
                 <button class="folder__project">Project C</button>
             </div>
@@ -46,9 +46,21 @@
             </div>
         </nav>
         <div class="dashboard">
-            <div class="dashboard__header"></div>
-            <div class="dashboard__navigation"></div>
-            <div class="dashboard__content"></div>
+            <div class="dashboard__header">
+                <h2>Dashboard</h2>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="dashboard__navigation">
+                <button class="dashboard__navButton">Overview</button>
+                <button class="dashboard__navButton">List</button>
+                <button class="dashboard__navButton">Board</button>
+                <button class="dashboard__navButton">Timeline</button>
+                <button class="dashboard__viewButton -pushLeft">Filter</button>
+                <button class="dashboard__viewButton">Sort</button>
+            </div>
+            <div class="dashboard__content">
+                
+            </div>
         </div>
 
         <nav class="sidebar sidebar--right"></div>
