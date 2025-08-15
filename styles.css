@@ -107,6 +107,27 @@ main {
     margin-left: auto;
 }
 
-.dashboard__content {
+.content {
     grid-area: main;
+
+    display: grid;
+    grid-auto-flow: column;
+    height: 100%;
+}
+
+.board {
+    margin: 1rem;
+    padding: 1em;
+    border: 0.15em solid lightslategrey;
+    border-radius: 1em;
+}
+
+.board > header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board > footer {
+    display: flex;
+    justify-content: flex-start;
 }

@@ -45,6 +45,7 @@
                 <button class="settings__collapse">←</button>
             </div>
         </nav>
+
         <div class="dashboard">
             <div class="dashboard__header">
                 <h2>Dashboard</h2>
@@ -58,12 +59,43 @@
                 <button class="dashboard__viewButton -pushLeft">Filter</button>
                 <button class="dashboard__viewButton">Sort</button>
             </div>
-            <div class="dashboard__content">
-                
+            <div class="content">
+                <!-- The columns could be a gridbox that stretches children to the left
+                 In addition, js could probably spawn tasks, so columns just need a header. Flex or grid? Descending divs with margins in between? 
+                 As for the tasks, two types: projects and atoms. Atomic tasks are 
+                 one offs. Projects complete iff all children atom tasks are completed.
+                 In that way, projects are faux tasks? children tasks could have a flag
+                 that sets their margin-left to a bigger value. (relative to rem?)-->
+                <section class="board">
+                    <header>
+                        <h3 class="board__header">Overdue</h3>
+                        <button>. . .</button>
+                    </header>
+                    <div>
+
+                    </div>
+                    <footer>
+                        
+                    </footer>
+                </section>
+                <div class="board">
+                    <header>
+                        <h3 class="board__header">Today</h3>
+                        <button>. . .</button>
+                    </header>
+                </div>
+                <div class="board">
+                    <header>
+                        <h3 class="board__header">Upcoming</h3>
+                        <button>. . .</button>
+                    </header>
+                </div>
             </div>
         </div>
 
-        <nav class="sidebar sidebar--right"></div>
+        <nav class="sidebar sidebar--right">
+            
+        </div>
     </main>
 </body>
 
