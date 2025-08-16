@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 0px solid blue; /* for debugging */
+    border: 0px solid blue;
+    /* for debugging */
 }
 
 h2 {
@@ -13,11 +14,12 @@ h1 {
     line-height: 1;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
-main {
+body>main {
     display: flex;
     flex-direction: row;
     height: 100%
@@ -47,7 +49,8 @@ main {
     justify-content: space-between;
 }
 
-.folder__project, .folder__project.-pinned {
+.folder__project,
+.folder__project.-pinned {
     margin: 0.25rem;
     margin-left: 1.5rem;
 }
@@ -69,7 +72,7 @@ main {
 }
 
 /* for debugging */
-.dashboard > * {
+.dashboard>* {
     border: 1px solid green;
 }
 
@@ -78,6 +81,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 1rem;
 }
 
 .dashboard__navigation {
@@ -112,6 +116,7 @@ main {
 
     display: grid;
     grid-auto-flow: column;
+    grid-auto-columns: 25em;
     height: 100%;
 }
 
@@ -122,12 +127,111 @@ main {
     border-radius: 1em;
 }
 
-.board > header {
+.board>header {
     display: flex;
     justify-content: space-between;
 }
 
-.board > footer {
+.task {
     display: flex;
-    justify-content: flex-start;
+    gap: 0.25em;
+    align-items: flex-start;
+    height: auto;
+
+    margin: 0.5rem;
+    padding: 0.5em;
+    border: 0.15em solid lightslategrey;
+    border-radius: 1em;
+}
+
+.task__completeButton {
+    border: 1px solid black;
+    border-radius: 1em;
+    width: 1.25em;
+    height: 1.25em;
+    background-color: transparent;
+}
+
+.task__completeButton:hover {
+    background-color: rgb(248, 243, 243);
+}
+
+.task__title {
+    font-weight: bold;
+    font-size: large;
+}
+
+.task__contentWrapper {
+    width: 100%;
+}
+
+.task__contentWrapper>* {
+    margin: 0.1em;
+}
+
+.task footer {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task time {
+    display: block;
+}
+
+.task__priority.-low {
+    background-color: yellowgreen;
+}
+
+.task__priority.-medium {
+    background-color: yellow;
+}
+
+.task__priority.-high {
+    background-color: red;
+}
+
+.task__priority.-sensitive {
+    background-color: navajowhite;
+    font-style: italic;
+}
+
+.task__repeat {
+    color: lightgrey;
+}
+
+.projectTask>header {
+    margin: 1.25em 0.5rem;
+
+    padding: 0.5em;
+    border: 0.15em solid lightslategrey;
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectTask * h4 {
+    font-size: larger;
+}
+
+.projectTask__viewAllButton {
+    background-color: white;
+    padding: 0em 2em;
+    border: 0.15em solid grey;
+    border-radius: 1em;
+    margin-bottom: -1.75em;
+}
+
+.projectTask__viewAllButton:hover {
+    background-color: rgb(248, 243, 243);
+}
+
+.projectTask__taskColumn {
+    margin-bottom: 1.5em;
+}
+
+.task.-projectChild {
+    margin-left: 4em;
 }

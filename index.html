@@ -60,42 +60,154 @@
                 <button class="dashboard__viewButton">Sort</button>
             </div>
             <div class="content">
-                <!-- The columns could be a gridbox that stretches children to the left
-                 In addition, js could probably spawn tasks, so columns just need a header. Flex or grid? Descending divs with margins in between? 
-                 As for the tasks, two types: projects and atoms. Atomic tasks are 
-                 one offs. Projects complete iff all children atom tasks are completed.
-                 In that way, projects are faux tasks? children tasks could have a flag
-                 that sets their margin-left to a bigger value. (relative to rem?)-->
                 <section class="board">
                     <header>
                         <h3 class="board__header">Overdue</h3>
-                        <button>. . .</button>
+                        <button class="board__addTaskButton">+</button>
                     </header>
-                    <div>
-
-                    </div>
-                    <footer>
-                        
-                    </footer>
+                    <main class="board__taskColumn">
+                        <!--Tasks are, by default, atomic.-->
+                        <div class="task">
+                            <button class="task__completeButton"></button>
+                            <div class="task__contentWrapper">
+                                <header class="task__title">Buy groceries</header>
+                                <p class="task__description">Eggs, white bread, milk</p>
+                                <div class="task__location">📍 8th Street Market</div>
+                                <footer>
+                                    <time datetime="06-06">Jun 6th</time>
+                                    <div class="task__priority -medium">Med.</div>
+                                </footer>
+                            </div>
+                        </div>
+                    </main>
                 </section>
                 <div class="board">
                     <header>
                         <h3 class="board__header">Today</h3>
-                        <button>. . .</button>
+                        <button>+</button>
                     </header>
+                    <main class="board__taskColumn">
+                        <!--Project-level tasks are complete iff all children tasks are complete.-->
+                        <div class="projectTask">
+                            <header>
+                                <h4 class="projectTask__title">Data Structures Final</h4>
+                                <button class="projectTask__viewAllButton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </button>
+                            </header>
+                            <div class="projectTask__taskColumn">
+                                <div class="task -projectChild">
+                                    <button class="task__completeButton"></button>
+                                    <div class="task__contentWrapper">
+                                        <header class="task__title">Finish B Tree code</header>
+                                        <p class="task__description">pp. 300-305</p>
+                                        <div class="task__location"><br/></div>
+                                        <footer>
+                                            <time datetime="06-07">Jun 7th</time>
+                                            <div class="task__priority -high">High</div>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="task -projectChild">
+                                    <button class="task__completeButton"></button>
+                                    <div class="task__contentWrapper">
+                                        <header class="task__title">Contact Sydney on Project</header>
+                                        <p class="task__description"><br/></p>
+                                        <div class="task__location"><br/></div>
+                                        <footer>
+                                            <time datetime="06-07">Jun 7th</time>
+                                            <div class="task__priority -medium">Med.</div>
+                                            <div class="task__repeat">Repeats 1 day</div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <button class="task__completeButton"></button>
+                            <div class="task__contentWrapper">
+                                <header class="task__title">Study Session!</header>
+                                <!--Empty content descriptions get a line break to show lack of content-->
+                                <p class="task__description"><br/></p>
+                                <div class="task__location">📍 Greenwich Library</div>
+                                <footer>
+                                    <time datetime="06-07">Jun 7th</time>
+                                    <div class="task__priority -low">Low</div>
+                                    <div class="task__repeat">Repeats 1 day</div>
+                                </footer>
+                            </div>
+                        </div>
+                    </main>
                 </div>
                 <div class="board">
                     <header>
                         <h3 class="board__header">Upcoming</h3>
-                        <button>. . .</button>
+                        <button>+</button>
                     </header>
+                    <main class="board__taskColumn">
+                        <div class="task">
+                            <button class="task__completeButton"></button>
+                            <div class="task__contentWrapper">
+                                <header class="task__title">Coffee Chat</header>
+                                <p class="task__description">w/ Professor White re: club requirements</p>
+                                <div class="task__location">📍 Think Coffee Mercer</div>
+                                <footer>
+                                    <time datetime="06-08 11:00">Jun 8th 11:00 AM</time>
+                                    <div class="task__priority -sensitive">Time-sensitive</div>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="projectTask">
+                            <header>
+                                <h4 class="projectTask__title">Data Structures Final</h4>
+                                <button class="projectTask__viewAllButton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" />
+                                    </svg>
+                                </button>
+                            </header>
+                            <div class="projectTask__taskColumn">
+                                <div class="task -projectChild">
+                                    <button class="task__completeButton"></button>
+                                    <div class="task__contentWrapper">
+                                        <header class="task__title">Start Binary Sort</header>
+                                        <p class="task__description">pp. 214-9</p>
+                                        <div class="task__location"><br/></div>
+                                        <footer>
+                                            <time datetime="06-08">Jun 8th</time>
+                                            <div class="task__priority -high">High</div>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <button class="task__completeButton"></button>
+                            <div class="task__contentWrapper">
+                                <header class="task__title">Study Session!</header>
+                                <p class="task__description"><br/></p>
+                                <div class="task__location">📍 Greenwich Library</div>
+                                <footer>
+                                    <time datetime="06-08">Jun 8th</time>
+                                    <div class="task__priority -low">Low</div>
+                                    <div class="task__repeat">Repeats 1 day</div>
+                                </footer>
+                            </div>
+                        </div>
+                    </main>
                 </div>
             </div>
         </div>
 
         <nav class="sidebar sidebar--right">
-            
-        </div>
+
+            </div>
     </main>
 </body>
 
