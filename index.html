@@ -19,26 +19,32 @@
                 </form>
                 <button class="search__addTask">+</button>
             </div>
-            <button class="sidebar__button">📝 Dashboard</button>
-            <button class="sidebar__button">📆 Today</button>
-            <button class="sidebar__button">⭐️ Starred</button>
+            <a class="sidebar__navigationLink" href="#">📝 Dashboard</a>
+            <a class="sidebar__navigationLink" href="#">📆 Today</a>
+            <a class="sidebar__navigationLink" href="#">⭐️ Starred</a>
             <div class="folder">
                 <div class="folder__header">
                     <div class="folder__name">Folder A</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project -pinned">Pinned Project A</button>
-                <button class="folder__project -pinned">Pinned Project B</button>
-                <button class="folder__project">Project C</button>
+                <ul>
+                    <li><button class="folder__project -pinned">Pinned Project A</button></li>
+                    <li><button class="folder__project -pinned">Pinned Project B</button></li>
+                    <li><button class="folder__project">Project C</button></li>
+                </ul>
             </div>
             <div class="folder">
                 <div class="folder__header">
                     <div class="folder__name">Folder B</div>
                     <button class="folder__addProject">+</button>
                 </div>
-                <button class="folder__project -pinned">Pinned Project A</button>
-                <button class="folder__project">Project B</button>
-                <button class="folder__project">Project C</button>
+
+                <ul>
+                    <li><button class="folder__project -pinned">Pinned Project A</button></li>
+                    <li><button class="folder__project">Project B</button></li>
+                    <li><button class="folder__project">Project C</button></li>
+                </ul>
+
             </div>
             <div class="settings__header">
                 <button class="settings__settings">⚙️</button>
@@ -105,7 +111,7 @@
                                     <div class="task__contentWrapper">
                                         <header class="task__title">Finish B Tree code</header>
                                         <p class="task__description">pp. 300-305</p>
-                                        <div class="task__location"><br/></div>
+                                        <div class="task__location"><br /></div>
                                         <footer>
                                             <time datetime="06-07">Jun 7th</time>
                                             <div class="task__priority -high">High</div>
@@ -116,8 +122,8 @@
                                     <button class="task__completeButton"></button>
                                     <div class="task__contentWrapper">
                                         <header class="task__title">Contact Sydney on Project</header>
-                                        <p class="task__description"><br/></p>
-                                        <div class="task__location"><br/></div>
+                                        <p class="task__description"><br /></p>
+                                        <div class="task__location"><br /></div>
                                         <footer>
                                             <time datetime="06-07">Jun 7th</time>
                                             <div class="task__priority -medium">Med.</div>
@@ -132,7 +138,7 @@
                             <div class="task__contentWrapper">
                                 <header class="task__title">Study Session!</header>
                                 <!--Empty content descriptions get a line break to show lack of content-->
-                                <p class="task__description"><br/></p>
+                                <p class="task__description"><br /></p>
                                 <div class="task__location">📍 Greenwich Library</div>
                                 <footer>
                                     <time datetime="06-07">Jun 7th</time>
@@ -178,7 +184,7 @@
                                     <div class="task__contentWrapper">
                                         <header class="task__title">Start Binary Sort</header>
                                         <p class="task__description">pp. 214-9</p>
-                                        <div class="task__location"><br/></div>
+                                        <div class="task__location"><br /></div>
                                         <footer>
                                             <time datetime="06-08">Jun 8th</time>
                                             <div class="task__priority -high">High</div>
@@ -191,7 +197,7 @@
                             <button class="task__completeButton"></button>
                             <div class="task__contentWrapper">
                                 <header class="task__title">Study Session!</header>
-                                <p class="task__description"><br/></p>
+                                <p class="task__description"><br /></p>
                                 <div class="task__location">📍 Greenwich Library</div>
                                 <footer>
                                     <time datetime="06-08">Jun 8th</time>
@@ -204,10 +210,7 @@
                 </div>
             </div>
         </div>
-
         <nav class="sidebar sidebar--right">
-
-            </div>
     </main>
 </body>
 
