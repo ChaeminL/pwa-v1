@@ -7,8 +7,15 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Color palette from https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578 
-   - Ocean Pearl Delight */
+/* 
+    Primary color palette from: 
+        Ocean Pearl Delight
+        https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578 
+
+    Blue gradient from: 
+        Ocean Breeze Serenity
+        https://coolors.co/palette/006d77-42999b-63afad-83c5be-9fd2cd-badfdc-d6eceb-f1f9f9
+*/
 html,
 body {
     height: 100%;
@@ -44,6 +51,15 @@ body>main {
     justify-content: space-between;
 }
 
+/* SEARCH */
+.search {
+    margin-bottom: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+/* SIDEBAR NAVIGATION LINKS */
 .sidebar__navigationLink,
 .sidebar__navigationLink:visited {
     text-decoration: none;
@@ -59,31 +75,72 @@ body>main {
     background-color: aliceblue;
 }
 
-.search {
-    display: flex;
-    margin-bottom: 2rem;
-    gap: 0.25rem;
-}
-
+/* FOLDERS */
 .folder {
+    margin: 0.5rem 0rem;
+    padding: 0.2rem;
+
+    background-color: #BADFDC;
+    border-radius: 0.5rem;
+
     display: flex;
     flex-direction: column;
-    margin: 0.5rem 0rem;
 }
 
 .folder__header {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 }
 
-.folder__project,
-.folder__project.-pinned {
-    margin: 0.25rem;
+.folder__name {
+    padding: 0.2rem;
+}
+
+.folder__addProject {
+    padding: 0.2rem 0.5rem;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.folder__addProject:hover {
+    background-color: #006D77;
+    color: #F1F9F9;
+}
+
+.folder>ul {
+    list-style-type: none;
+}
+
+.folder__project {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+
+    margin: 0.1rem 0.1rem 0.15rem 1.5rem;
     margin-left: 1.5rem;
+    padding: 0.2rem;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.folder__project:hover {
+    text-decoration: dashed slategrey underline;
 }
 
 .folder__project.-pinned {
-    color: blue;
+    margin-left: 1.35rem;
+    /* To horizontally align text with 📍 */ 
+} 
+
+.folder__project.-pinned::before {
+    content: "📍";
+    font-size: small;
+    /* For uniform margins between projects */ 
 }
 
 .settings__header {
@@ -212,13 +269,29 @@ h1 {
     margin-top: -0.15rem;
 }
 
-.task__contentWrapper>* {
-    margin: 0.1rem;
+.task__title {
+    margin-top: 0rem;
+    vertical-align: top;
 }
 
-.task__title {
-    margin-top: 0;
-    vertical-align: top;
+.task__description {
+    margin: 0.4rem 0;
+}
+
+.task__location {
+    margin: 0.75rem 0;    
+}
+
+.task__description:empty::before,
+.task__location:empty::before {
+    content: "\00a0"; 
+    /* NBSP: prevent automatic line breaks at this location*/
+    display: block;
+}
+
+.task__description:empty,
+.task__location:empty {
+    margin: 0.25rem;
 }
 
 .task footer {
