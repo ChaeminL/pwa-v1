@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Color palette from https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578 
@@ -20,6 +20,16 @@ body>main {
 
     display: flex;
     flex-direction: row;
+}
+
+/* GLOBAL VALUES (Custom Properties) */
+
+:root {
+    --priority-low: #9acd32;
+    --priority-medium: #ffd700;
+    --priority-high: #ff6347;
+    --priority-sensitive: #ffdead;
+    --border-color: #778899;
 }
 
 /* LEFT SIDEBAR/NAVIGATION */
@@ -40,7 +50,7 @@ body>main {
     text-align: center;
     color: black;
     background-color: #EDF6F9;
-    border: 0.1rem solid lightslategrey;
+    border: 0.1rem solid var(--border-color);
     border-radius: 1rem;
     padding: 0.25rem;
 }
@@ -79,6 +89,12 @@ body>main {
 .settings__header {
     display: flex;
     justify-content: space-between;
+}
+
+.settings__header>button {
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.3rem;
+    border: 1px;
 }
 
 /* DASHBOARD */
@@ -170,7 +186,7 @@ h1 {
 
     margin: 0.5rem;
     padding: 0.5rem;
-    border: 0.15rem solid lightslategrey;
+    border: 0.15rem solid var(--border-color);
     border-radius: 1rem;
 }
 
@@ -226,19 +242,19 @@ h1 {
 }
 
 .task__priority.-low {
-    background-color: yellowgreen;
+    background-color: var(--priority-low);
 }
 
 .task__priority.-medium {
-    background-color: yellow;
+    background-color: var(--priority-medium);
 }
 
 .task__priority.-high {
-    background-color: red;
+    background-color: var(--priority-high);
 }
 
 .task__priority.-sensitive {
-    background-color: navajowhite;
+    background-color: var(--priority-sensitive);
     font-style: italic;
 }
 
@@ -251,7 +267,7 @@ h1 {
     margin: 1.25rem 0.5rem;
 
     padding: 0.5rem;
-    border: 0.15rem solid lightslategrey;
+    border: 0.15rem solid var(--border-color);
     border-radius: 1rem;
 
     display: flex;
@@ -266,7 +282,7 @@ h1 {
 .projectTask__viewAllButton {
     background-color: white;
     padding: 0rem 2rem;
-    border: 0.15rem solid grey;
+    border: 0.15rem solid var(--border-color);
     border-radius: 1rem;
     margin-bottom: -1.5rem;
 }
@@ -285,5 +301,5 @@ h1 {
 
 /* DEBUG */
 *.-debug {
-    border: 0px solid blue;
+    border: 2px solid blue;
 }
