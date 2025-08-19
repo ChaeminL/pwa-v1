@@ -32,9 +32,9 @@ body>main {
     text-decoration: none;
     text-align: center;
     color: black;
-    border: 0.1em solid lightslategrey;
-    border-radius: 1em;
-    padding: 0.25em;
+    border: 0.1rem solid lightslategrey;
+    border-radius: 1rem;
+    padding: 0.25rem;
 }
 
 .sidebar__navigationLink:hover {
@@ -103,8 +103,8 @@ h1 {
 }
 
 .dashboard__navButton {
-    margin: 0.5em;
-    padding: 0.5em 0.75em 0.1em 0.75em;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem 0.1rem 0.75rem;
     background-color: transparent;
     text-decoration: underline black;
 }
@@ -114,9 +114,9 @@ h1 {
 }
 
 .dashboard__viewButton {
-    margin: 0.5em;
-    padding: 0.5em 0.75em;
-    border-radius: 2em;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 2rem;
 }
 
 .dashboard__viewButton.-pushLeft {
@@ -135,9 +135,9 @@ h1 {
 
 .board {
     margin: 1rem;
-    padding: 1em;
-    border: 0.15em solid lightslategrey;
-    border-radius: 1em;
+    padding: 1rem;
+    border: 0.15rem solid lightslategrey;
+    border-radius: 1rem;
 }
 
 .board>header {
@@ -149,21 +149,21 @@ h1 {
 
 .task {
     display: flex;
-    gap: 0.25em;
+    gap: 0.25rem;
     align-items: flex-start;
     height: auto;
 
     margin: 0.5rem;
-    padding: 0.5em;
-    border: 0.15em solid lightslategrey;
-    border-radius: 1em;
+    padding: 0.5rem;
+    border: 0.15rem solid lightslategrey;
+    border-radius: 1rem;
 }
 
 .task__completeButton {
     border: 1px solid black;
-    border-radius: 1em;
-    width: 1.25em;
-    height: 1.25em;
+    border-radius: 1rem;
+    width: 1rem;
+    height: 1rem;
     background-color: transparent;
 }
 
@@ -182,7 +182,7 @@ h1 {
 }
 
 .task__contentWrapper>* {
-    margin: 0.1em;
+    margin: 0.1rem;
 }
 
 .task__title {
@@ -191,13 +191,22 @@ h1 {
 }
 
 .task footer {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
+
+    font-size: 0.85rem;
 }
 
 .task time {
     display: block;
+}
+
+.task__priority {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #000;
+    display: inline-block;
 }
 
 .task__priority.-low {
@@ -225,9 +234,9 @@ h1 {
 .projectTask>header {
     margin: 1.25rem 0.5rem;
 
-    padding: 0.5em;
-    border: 0.15em solid lightslategrey;
-    border-radius: 1em;
+    padding: 0.5rem;
+    border: 0.15rem solid lightslategrey;
+    border-radius: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -240,10 +249,10 @@ h1 {
 
 .projectTask__viewAllButton {
     background-color: white;
-    padding: 0em 2em;
-    border: 0.15em solid grey;
-    border-radius: 1em;
-    margin-bottom: -1.75em;
+    padding: 0rem 2rem;
+    border: 0.15rem solid grey;
+    border-radius: 1rem;
+    margin-bottom: -1.5rem;
 }
 
 .projectTask__viewAllButton:hover {
@@ -251,11 +260,11 @@ h1 {
 }
 
 .projectTask__taskColumn {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 .task.-projectChild {
-    margin-left: 4em;
+    margin-left: 4rem;
 }
 
 /* DEBUG */
